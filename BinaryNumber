@@ -1,0 +1,27 @@
+package NumericalPattern;
+
+import java.util.Scanner;
+
+public class Binary {
+		static int checkbinary(int n) {
+			int i;
+			
+			for(i=1;i>=0;i=i/10) {
+				int digit=n%10;
+				if(digit!=0 || digit!=1) {
+					System.out.println("not a binary num");
+				}else {
+					System.out.println(" binary");
+				}n=n/10;
+			}
+			return n;
+		}
+	
+		public static void main(String[] args) {
+			Scanner sc= new Scanner(System.in);
+			System.out.println("enter a num");
+			int n=sc.nextInt();
+			sc.close();
+			checkbinary(n);
+		}
+}
